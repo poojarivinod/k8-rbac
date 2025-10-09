@@ -1,14 +1,21 @@
+# search in google as "edit aws auth configmap" --> click on "Amazon AWS Documentation" --> click on "edit configmap manually"(above "Edit Configmap with Eksctl")
+# it will map IAM user with kubernetes
 apiVersion: v1
 data:
   mapRoles: |
-    - rolearn: arn:aws:iam::695862934667:role/eksctl-expense-nodegroup-expense-NodeInstanceRole-YF3PfqHUihMr
+    - rolearn: arn:aws:iam::695862934667:role/eksctl-expense-nodegroup-expense-NodeInstanceRole-cZKxVMVXh27o
       groups:
       - system:bootstrappers
       - system:nodes
       username: system:node:{{EC2PrivateDNSName}}
+  mapUsers: |
+    - groups:
+      - default-trainee
+      userarn: arn:aws:iam::695862934667:user/vinod
+      username: vinod
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2025-10-08T05:35:58Z"
+  creationTimestamp: "2025-10-09T05:26:39Z"
   name: aws-auth
   namespace: kube-system
-  uid: 5d04cb5a-c397-4474-836a-daea5d8fa555
+  uid: c71a6a22-4176-44c5-9c30-01f8625bf1dd
