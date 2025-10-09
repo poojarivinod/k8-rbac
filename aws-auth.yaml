@@ -19,4 +19,5 @@ metadata:
   creationTimestamp: "2025-10-09T05:26:39Z"
   name: aws-auth
   namespace: kube-system
-  uid: c71a6a22-4176-44c5-9c30-01f8625bf1dd 
+  uid: c71a6a22-4176-44c5-9c30-01f8625bf1dd # This will change everytime when we delete the kubernetes cluster, either you don't give it or change it every time with new uid of kubernetes cluster.
+  #To get new uid of kubernetes cluster --> kubectl get configmap aws-auth -n kube-system -o yaml
