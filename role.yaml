@@ -6,7 +6,7 @@ metadata:
   name: default-trainee
 rules:
 - apiGroups: [""] # "" or empty indicates the core API group or v1. * means all. 
-  resources: ["pods"]
+  resources: ["*"]
   verbs: ["get", "watch", "list"]
 ---
 # rolebinding means attaching roles to the user 
