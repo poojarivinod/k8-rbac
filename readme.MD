@@ -1,4 +1,4 @@
-# RBAC
+# Ingress Controller
 
 search in google as eks ingress controller--> click on github.io--> Deployment--> Installation Guide
 
